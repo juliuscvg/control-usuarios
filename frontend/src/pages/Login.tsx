@@ -10,6 +10,7 @@ const Login = () => {
   const handleSubmit = (event: FormEvent) => {
     event.preventDefault();
     localStorage.setItem("demo-token", "demo-session");
+    localStorage.setItem("demo-actor", email);
     const redirect =
       (location.state as { from?: { pathname?: string } })?.from?.pathname ??
       "/admin";
